@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "721567171128",
+    "project_id": "offer-java",
+    "storage_bucket": "offer-java.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:721567171128:android:56fdabc8747e9ea8d7dccd",
+        "android_client_info": {
+          "package_name": "com.example.offer_java"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQmekC1rW5tEbPvxD61mdwj6RyItaMeEs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
