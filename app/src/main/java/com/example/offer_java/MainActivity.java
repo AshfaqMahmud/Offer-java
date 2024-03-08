@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -22,6 +23,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
@@ -60,6 +62,27 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.recycler);
         FloatingActionButton OpenBottomSheet = findViewById(R.id.open_modal_bottom_sheet);
         ArrayList<String> arrayList = new ArrayList<>();
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int itemId = item.getItemId();
+                if (itemId == R.id.navigation_home) {
+                    // Handle Home navigation
+                    return true;
+                } else if (itemId == R.id.navigation_chat) {
+                    Intent intentChat = new Intent(MainActivity.this, ChatActivity.class);
+                    startActivity(intentChat);
+                    return true;
+                } else if (itemId == R.id.navigation_profile) {
+                    // Handle Profile navigation
+                    Toast.makeText(MainActivity.this, "Profile Clicked", Toast.LENGTH_SHORT).show();
+                    return true;
+                }
+                return false;
+            }
+        });
 
         arrayList.add("https://cdn.wedevs.com/uploads/2021/04/weDevs-Black-friday-offer-1024x559.png");
         arrayList.add("https://www.ryanscomputers.com/storage/sliders/Order-Online-Express-Delivery-in-Dhaka-Main-Slide_1702528248.webp");
