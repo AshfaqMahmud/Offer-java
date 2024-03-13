@@ -66,7 +66,7 @@ public class Login extends AppCompatActivity {
                             SharedPreferences sharedPreferences = getSharedPreferences("login", 0);
                             SharedPreferences.Editor myEdit = sharedPreferences.edit();
                             myEdit.putBoolean("status", true);
-                            myEdit.commit();
+                            myEdit.apply();
                             Intent intent = new Intent(Login.this, MainActivity.class);
                             startActivity(intent);
                             finish();

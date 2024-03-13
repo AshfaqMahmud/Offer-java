@@ -148,10 +148,10 @@ public class Registration extends AppCompatActivity {
                     tcpass.setError("Password cannot be empty");
                     return;
                 }
-                if(pass != cpass)
-                {
-                    Toast.makeText(Registration.this, "Password and Confirm Password must be same", Toast.LENGTH_SHORT).show();
-                }
+//                if(pass != cpass)
+//                {
+//                    Toast.makeText(Registration.this, "Password and Confirm Password must be same", Toast.LENGTH_SHORT).show();
+//                }
                 else{
                     mAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(Registration.this, new OnCompleteListener<AuthResult>() {
                         @Override

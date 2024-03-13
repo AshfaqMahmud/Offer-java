@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.ProfileFrag">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="ifContentScrolls"
+        android:scrollbarStyle="insideOverlay">
+        <LinearLayout
+            android:id="@+id/userbanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:padding="5dp"
+            android:background="@color/white">
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/userimage"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                app:shapeAppearanceOverlay="@style/circleImageView"
+                app:srcCompat="@drawable/user_default"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/logout"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/ic_baseline_logout_24"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/lexend_deca"
+                    android:text=" "
+                    android:textColor="@color/black"
+                    android:textColorHint="#3C545454"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <TextView
+                    android:id="@+id/usermail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/lexend_deca"
+                    android:hint="mackcy.hannah@gmail.com"
+                    android:textColor="@color/black"
+                    android:textColorHint="#3C545454"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/userconct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/lexend_deca"
+                    android:hint="+8801010101010"
+                    android:textColor="@color/black"
+                    android:textColorHint="#3C545454"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/userstatus"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/userbanner"
+            android:orientation="vertical"
+            android:layout_marginTop="2dp"
+            android:padding="15dp"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lexend_deca"
+                android:text="Status"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lexend_deca"
+                android:hint="Employed at Meta.co from DATE"
+                android:textColor="@color/black"
+                android:textColorHint="#3C545454"
+                android:textSize="15sp" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/userabout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userstatus"
+            android:orientation="vertical"
+            android:layout_marginTop="2dp"
+            android:padding="15dp"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lexend_deca"
+                android:text="About"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lexend_deca"
+                android:hint="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum congue iaculis lorem, a tempor lacus ultrices ut. Curabitur id hendrerit erat, et sodales leo. Aenean vel hendrerit nisi, in vestibulum ex. Duis euismod sit amet mi vel facilisis. Ut blandit ante ac purus fermentum, ac maximus lacus interdum. Praesent pulvinar erat id elit pretium, non gravida diam luctus. Ut orci lorem, eleifend non enim non, porttitor suscipit felis. Aliquam lectus sem, ultricies vitae ante eu, malesuada tristique nisi. Pellentesque ac turpis eget tellus vestibulum lobortis. Quisque venenatis fermentum dictum."
+                android:justificationMode="inter_word"
+                android:textColor="@color/black"
+                android:textColorHint="#3C545454"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/userexp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userabout"
+            android:orientation="vertical"
+            android:layout_marginTop="2dp"
+            android:padding="15dp"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lexend_deca"
+                android:text="Experience"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/exp1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lexend_deca"
+                android:hint="1. Experience "
+                android:textColor="@color/black"
+                android:textColorHint="#3C545454"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/exp2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lexend_deca"
+                android:hint="2. Experience "
+                android:textColor="@color/black"
+                android:textColorHint="#3C545454"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/useredu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userexp"
+            android:orientation="vertical"
+            android:layout_marginTop="2dp"
+            android:padding="15dp"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lexend_deca"
+                android:text="Experience"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/school"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lexend_deca"
+                android:hint="1.School "
+                android:textColor="@color/black"
+                android:textColorHint="#3C545454"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/college"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lexend_deca"
+                android:hint="2.College "
+                android:textColor="@color/black"
+                android:textColorHint="#3C545454"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/editprofile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/useredu"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="#80CBC4"
+            android:fontFamily="@font/lexend_deca"
+            android:minHeight="55dp"
+            android:text="Edit Profile"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:ignore="TouchTargetSizeCheck" />
+    </RelativeLayout>
+
+
+
+
+</ScrollView>
