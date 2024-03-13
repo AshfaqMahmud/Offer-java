@@ -3,20 +3,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#81D4FA"
     tools:context=".Registration">
     <RelativeLayout
         android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
+            android:fontFamily="@font/lexend_deca"
             android:text="Register Yourself"
-            android:textStyle="bold"
-            android:textColor="#2196F3"
-            android:textSize="30sp" />
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/tname"
@@ -28,6 +31,7 @@
             android:layout_marginTop="40dp"
             android:layout_marginEnd="30dp"
             android:background="@drawable/background_custom"
+            android:fontFamily="@font/lexend_deca"
             android:hint="Fullname"
             android:includeFontPadding="true"
             android:inputType="textEmailAddress"
@@ -47,6 +51,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginEnd="30dp"
             android:background="@drawable/background_custom"
+            android:fontFamily="@font/lexend_deca"
             android:hint="Phone Number"
             android:includeFontPadding="true"
             android:inputType="phone"
@@ -66,6 +71,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginEnd="30dp"
             android:background="@drawable/background_custom"
+            android:fontFamily="@font/lexend_deca"
             android:hint="Email"
             android:includeFontPadding="true"
             android:inputType="textEmailAddress"
@@ -85,6 +91,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginEnd="30dp"
             android:background="@drawable/background_custom"
+            android:fontFamily="@font/lexend_deca"
             android:hint="Password"
             android:includeFontPadding="true"
             android:inputType="textPassword"
@@ -104,6 +111,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginEnd="30dp"
             android:background="@drawable/background_custom"
+            android:fontFamily="@font/lexend_deca"
             android:hint="Confirm Password"
             android:includeFontPadding="true"
             android:inputType="textPassword"
@@ -115,7 +123,7 @@
 
         <Button
             android:id="@+id/rgstrb"
-            android:layout_width="match_parent"
+            android:layout_width="200dp"
             android:layout_height="60dp"
             android:layout_below="@+id/genderpicker"
             android:layout_centerHorizontal="true"
@@ -123,7 +131,8 @@
             android:layout_marginTop="30dp"
             android:layout_marginEnd="30dp"
             android:layout_marginRight="10dp"
-            android:backgroundTint="#5780F1"
+            android:backgroundTint="#EA458F"
+            android:fontFamily="@font/lexend_deca"
             android:padding="10dp"
             android:text="Submit"
             android:textColor="#FFFCFC"
@@ -148,9 +157,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="55dp"
                 android:layout_marginEnd="40dp"
+                android:background="@drawable/background_custom"
+                android:fontFamily="@font/lexend_deca"
                 android:onClick="onRadioButtonClicked"
                 android:text="Male"
-                android:background="@drawable/background_custom"
                 android:textColor="#373737"
                 android:textSize="15sp" />
 
@@ -158,9 +168,10 @@
                 android:id="@+id/rbutton2"
                 android:layout_width="wrap_content"
                 android:layout_height="55dp"
+                android:background="@drawable/background_custom"
+                android:fontFamily="@font/lexend_deca"
                 android:onClick="onRadioButtonClicked"
                 android:text="Female"
-                android:background="@drawable/background_custom"
                 android:textColor="#373737"
                 android:textSize="15sp" />
         </RadioGroup>
