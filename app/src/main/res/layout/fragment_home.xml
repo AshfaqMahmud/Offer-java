@@ -4,6 +4,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="10dp"
     tools:context=".Fragments.HomeFragment">
 
     <LinearLayout
@@ -11,21 +12,22 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="10dp"
+        android:visibility="gone"
         android:orientation="horizontal">
 
         <EditText
             android:id="@+id/searchEditText"
             android:layout_width="0dp"
-            android:maxWidth="400dp"
-            android:fontFamily="@font/lexend_deca"
             android:layout_height="match_parent"
-            android:minHeight="40dp"
-            android:layout_weight="1"
             android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/lexend_deca"
             android:hint="Search"
+            android:imeOptions="actionSearch"
             android:inputType="text"
+            android:maxWidth="400dp"
             android:maxLines="1"
-            android:imeOptions="actionSearch" />
+            android:minHeight="40dp" />
 
         <Button
             android:id="@+id/searchButton"
@@ -38,10 +40,21 @@
             android:text="Search" />
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/main_tv"
+        android:layout_below="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get your Offer!!!"
+        android:fontFamily="@font/lexend_deca"
+        android:textSize="20sp"
+        android:layout_marginBottom="5dp"
+        android:textStyle="bold"
+        />
     <!-- Parent RecyclerView -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/parentRecyclerView"
-        android:layout_below="@+id/search_bar"
+        android:layout_below="@+id/main_tv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />

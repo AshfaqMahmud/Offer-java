@@ -18,7 +18,8 @@
             android:layout_height="wrap_content"
             android:text="Profile"
             android:textColor="@color/black"
-            android:textSize="40sp"
+            android:textSize="20sp"
+            android:textStyle="bold"
             android:fontFamily="@font/lexend_deca"
             />
         <LinearLayout

@@ -6,10 +6,6 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-
 import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,10 +15,15 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.example.offer_java.MainActivity;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+
 import com.example.offer_java.R;
+import com.example.offer_java.User;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.annotations.Nullable;
@@ -32,8 +33,6 @@ import com.google.firebase.storage.UploadTask;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.UUID;
 
 public class PostFragment extends Fragment {
@@ -46,7 +45,12 @@ public class PostFragment extends Fragment {
     private Button buttonPost;
     private Button buttonDiscard;
 
+    private String key ;
+
     private Uri imageUri;
+
+    public PostFragment() {
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -100,16 +104,14 @@ public class PostFragment extends Fragment {
                                 // Get a reference to the Realtime Database
                                 DatabaseReference database = FirebaseDatabase.getInstance().getReference();
 
-                                // Create a unique key for the data
-                                String key = database.child("data").push().getKey();
+                                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                                key = user.getUid();
+                                String key2 = database.child("data").push().getKey();
 
-                                // Create a HashMap to store the data
-                                Map<String, Object> data = new HashMap<>();
-                                data.put("imageUrl", uri.toString());
-                                data.put("editTextValue", editTextDescription.getText().toString());
+                                User user_image_data = new User(uri.toString(),editTextDescription.getText().toString());
 
                                 // Upload the data to Realtime Database
-                                database.child("data").child(key).setValue(data)
+                                database.child("data").child(key).child(key2).setValue(user_image_data)
                                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                                             @Override
                                             public void onSuccess(Void aVoid) {

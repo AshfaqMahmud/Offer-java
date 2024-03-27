@@ -4,16 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    android:layout_marginTop="30dp"
     tools:context=".MainActivity">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="80dp"
         android:background="@color/white"
-        android:layout_marginBottom="76dp"
-        android:minHeight="400dp"
         tools:ignore="SpeakableTextPresentCheck">
 
         <FrameLayout
@@ -24,11 +21,13 @@
         </FrameLayout>
     </ScrollView>
 
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#0288D1"
         android:layout_gravity="bottom"
         app:menu="@menu/bottom_navigation_menu" />
+
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
