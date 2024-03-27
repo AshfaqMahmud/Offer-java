@@ -16,16 +16,16 @@
         <EditText
             android:id="@+id/searchEditText"
             android:layout_width="0dp"
-            android:maxWidth="400dp"
-            android:fontFamily="@font/lexend_deca"
             android:layout_height="match_parent"
-            android:minHeight="40dp"
-            android:layout_weight="1"
             android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/lexend_deca"
             android:hint="Search"
+            android:imeOptions="actionSearch"
             android:inputType="text"
+            android:maxWidth="400dp"
             android:maxLines="1"
-            android:imeOptions="actionSearch" />
+            android:minHeight="40dp" />
 
         <Button
             android:id="@+id/searchButton"

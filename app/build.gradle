@@ -45,4 +45,7 @@ dependencies {
     androidTestImplementation libs.espresso.core
     implementation libs.glide
     implementation libs.material.v130alpha04
+    implementation libs.viewpager2
+    implementation 'com.github.AtikulSoftware:smart-slider:1.0'
+    implementation 'com.squareup.picasso:picasso:2.8'
 }
